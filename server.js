@@ -54,7 +54,7 @@ app.get("/categories", (req, res) => {
 
 // Route for unmatched routes
 app.use((req, res) => {
-  res.send("Page not Found");
+  res.sendFile(path.join(__dirname, "/views/404.html"));
 });
 
 // Start the server
